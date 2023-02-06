@@ -53,11 +53,8 @@ def write_to_gcs(path: Path, color: str, file_name: str) -> None:
 
 
 @flow(name="Ingest to GCP (Homework Q4)", log_prints=True)
-def etl_web_to_gcs() -> None:
+def etl_web_to_gcs(color: str = 'green', year: int = 2020, months: list[int] = [11]) -> None:
     """The main ETL function"""
-    color = 'green'
-    year = 2020
-    months = [11]
 
     for month in months:
 
